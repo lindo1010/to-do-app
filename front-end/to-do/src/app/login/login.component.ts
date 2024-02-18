@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin() {
-    if (this.hardcodedAuthService.aunthenticate("Fluffy","lindokuhle")) {
+    if (this.hardcodedAuthService.aunthenticate(this.username, this.password)) {
       //redirect to welcome page
       this.router.navigate(['welcome',this.username])
       this.invalidLogin = false;
